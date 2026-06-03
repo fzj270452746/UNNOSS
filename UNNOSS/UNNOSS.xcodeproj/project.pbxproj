@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		78D59364EF453F9ACF7DA132 /* Pods_UNNOSS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DDADD8A2647CC271B459E8 /* Pods_UNNOSS.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		28D2CCF52FCFB87F00EC7205 /* UNNOSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UNNOSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AB272B677C140919CFD7644 /* Pods-UNNOSS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UNNOSS.release.xcconfig"; path = "Target Support Files/Pods-UNNOSS/Pods-UNNOSS.release.xcconfig"; sourceTree = "<group>"; };
+		81DDADD8A2647CC271B459E8 /* Pods_UNNOSS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UNNOSS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3F771D2DC93AFC8E59A42C3 /* Pods-UNNOSS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UNNOSS.debug.xcconfig"; path = "Target Support Files/Pods-UNNOSS/Pods-UNNOSS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78D59364EF453F9ACF7DA132 /* Pods_UNNOSS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +55,8 @@
 			children = (
 				28D2CCF72FCFB87F00EC7205 /* UNNOSS */,
 				28D2CCF62FCFB87F00EC7205 /* Products */,
+				DBB768FCA7E0C4B1D4000D7D /* Pods */,
+				D608ABAFB9A2A9E97C0AF1B9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +68,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		D608ABAFB9A2A9E97C0AF1B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81DDADD8A2647CC271B459E8 /* Pods_UNNOSS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBB768FCA7E0C4B1D4000D7D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3F771D2DC93AFC8E59A42C3 /* Pods-UNNOSS.debug.xcconfig */,
+				3AB272B677C140919CFD7644 /* Pods-UNNOSS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,6 +93,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28D2CD082FCFB88100EC7205 /* Build configuration list for PBXNativeTarget "UNNOSS" */;
 			buildPhases = (
+				3D645292B58168DF566AD0B2 /* [CP] Check Pods Manifest.lock */,
 				28D2CCF12FCFB87F00EC7205 /* Sources */,
 				28D2CCF22FCFB87F00EC7205 /* Frameworks */,
 				28D2CCF32FCFB87F00EC7205 /* Resources */,
@@ -77,8 +106,6 @@
 				28D2CCF72FCFB87F00EC7205 /* UNNOSS */,
 			);
 			name = UNNOSS;
-			packageProductDependencies = (
-			);
 			productName = UNNOSS;
 			productReference = 28D2CCF52FCFB87F00EC7205 /* UNNOSS.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +154,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3D645292B58168DF566AD0B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UNNOSS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		28D2CCF12FCFB87F00EC7205 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +192,7 @@
 /* Begin XCBuildConfiguration section */
 		28D2CD092FCFB88100EC7205 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3F771D2DC93AFC8E59A42C3 /* Pods-UNNOSS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -176,6 +229,7 @@
 		};
 		28D2CD0A2FCFB88100EC7205 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AB272B677C140919CFD7644 /* Pods-UNNOSS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
